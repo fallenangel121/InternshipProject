@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+#nullable disable warnings
+
 namespace InternshipProject
 {
     internal class UserDb : Microsoft.EntityFrameworkCore.DbContext
