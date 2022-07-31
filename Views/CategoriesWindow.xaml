@@ -8,7 +8,7 @@
         xmlns:viewmodels="clr-namespace:InternshipProject.ViewModels"
         xmlns:views="clr-namespace:InternshipProject.Views"
         mc:Ignorable="d"
-        Title="CategoriesWindow" Height="450" Width="800">
+        Title="CategoriesWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" >
 
     <Window.Resources>
         <DataTemplate x:Name="AnimalsViewTemplate" DataType="{x:Type viewmodels:AnimalsViewModel}">
@@ -42,8 +42,9 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="5" Height="421" VerticalAlignment="Top" CornerRadius="90 0 180 21" Background="FloralWhite" MouseDown="Border_MouseDown"></Border>
+        <Border Grid.Row="0" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="5" Height="421" VerticalAlignment="Top" CornerRadius="90 0 180 21" Background="FloralWhite" MouseDown="Border_MouseDown"></Border>
 
         <DockPanel  Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="5">
             <StackPanel  Width="800" Height="150"  VerticalAlignment="Top" Orientation="Horizontal">
@@ -64,6 +65,6 @@
                 </Button>
             </StackPanel>
         </DockPanel>
-        <ContentControl Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="5" Content="Binding"/>
+        <ContentControl Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="5" Content="{Binding}"/>
     </Grid>
 </Window>

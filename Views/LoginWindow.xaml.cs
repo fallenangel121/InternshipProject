@@ -14,26 +14,26 @@ namespace InternshipProject
         public LoginWindow()
         {
             InitializeComponent();
-            DataContext = new LoginViewModel();
+            //DataContext = new LoginViewModel();
            
         }
 
-        private void OnPropertyChanged(String propertyName)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
+        //private void OnPropertyChanged(String propertyName)
+        //{
+        //    PropertyChangedEventHandler handler = PropertyChanged;
 
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        //    if (handler != null)
+        //    {
+        //        handler(this, new PropertyChangedEventArgs(propertyName));
+        //    }
+        //}
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             CategoriesWindow categoriesWindow = new CategoriesWindow();
-            System.Windows.Application.Current.MainWindow.Close();
             categoriesWindow.Show();
-
+            System.Windows.Application.Current.MainWindow.Close();
+            
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)

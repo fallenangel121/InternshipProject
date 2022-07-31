@@ -13,6 +13,6 @@
                 <GradientStop Color="#FF185C18" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Border Height="285" VerticalAlignment="Top" CornerRadius="0 0 180 21" Background="FloralWhite" ></Border>
+        <Border Height="270" VerticalAlignment="Top" CornerRadius="0 0 180 21" Background="FloralWhite" ></Border>
     </Grid>
 </UserControl>
