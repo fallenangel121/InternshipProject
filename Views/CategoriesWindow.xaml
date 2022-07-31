@@ -50,5 +50,6 @@
                 </Button>
             </StackPanel>
         </DockPanel>
+        <ContentControl Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="5" Content="Binding"/>
     </Grid>
 </Window>
