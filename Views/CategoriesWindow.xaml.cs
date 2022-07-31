@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InternshipProject.ViewModels;
+using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -22,11 +23,17 @@ namespace InternshipProject
 
         private void btnAnimals_Click(object sender, RoutedEventArgs e)
         {
-
+            DataContext = new AnimalsViewModel();
         }
 
         private void btnEvents_Click(object sender, RoutedEventArgs e)
         {
+            DataContext = new EventViewModel();
+        }
+
+        private void btnTickets_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new TicketsViewModel();
 
         }
     }
