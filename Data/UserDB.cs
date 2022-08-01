@@ -23,9 +23,8 @@ namespace InternshipProject
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            // connect to mysql with connection string from app settings
 
-            options.UseMySQL("Server=localhost;uid=root;pwd=;Database=ZOO");
+            options.UseMySQL("Server=localhost;uid=root;pwd=F@Ll3#^Ng3l_121;Database=ZOO");
         }
 
         public Microsoft.EntityFrameworkCore.DbSet<User> Users { get; set; }

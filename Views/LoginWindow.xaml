@@ -4,12 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:local="clr-namespace:InternshipProject"
-        
+        xmlns:local="clr-namespace:InternshipProject" 
+        xmlns:components="clr-namespace:InternshipProject.Components"
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" >
 
-    <Grid MouseDown="Border_MouseDown">
+    <Grid >
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
                 <GradientStop Color="#FF87C787" Offset="0"/>
@@ -17,7 +17,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Border Height="421" VerticalAlignment="Top" CornerRadius="90 0 180 21" Background="FloralWhite" MouseDown="Border_MouseDown"></Border>
+        <Border Height="421" VerticalAlignment="Top" CornerRadius="90 0 180 21" Background="FloralWhite" ></Border>
         <StackPanel Orientation="Horizontal">
             <StackPanel Width="350">
                 <Image Source="/Views/zoo_logo.png" Width="250" Height="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30" Stretch="Fill" />
@@ -31,22 +31,17 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <materialDesign:PackIcon Kind="Lock" Width="25" Height="25" Foreground="black"/>
-                        <PasswordBox x:Name="txtPassword" Margin="10 0" materialDesign:HintAssist.Hint="********" Foreground="black" Width="250" BorderBrush="black" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" />
+                        <components:BindablePasswordBox  Margin="10 0" materialDesign:HintAssist.Hint="********" Foreground="black" Width="250"  Password="{Binding Password}"/>
                     </StackPanel>
                     <StackPanel Margin="10" HorizontalAlignment="Center">
                         <Button Width="100" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" 
                             materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="{x:Null}"
-                         Background="White" Foreground="Black" ToolTip="Кликнете за вход в системата" x:Name="btnLogin" Content="Влез" Command="{Binding LoginCommand}" Click="btnLogin_Click" 
- CommandParameter="{Binding ElementName=txtPassword}">
+                         Background="White" Foreground="Black" ToolTip="Кликнете за вход в системата" x:Name="btnLogin" Content="Влез" Command="{Binding LoginCommand}" >
                         </Button>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
             <StackPanel Width="100">
-                <Button Margin="10 20" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="{x:Null}"
-                 ToolTip="Излез от приложението" x:Name="btnExit" Command="{Binding LoginCommand}" Click="btnExit_Click">
-                    <materialDesign:PackIcon Kind="Close" Foreground="Black" Width="30" Height="30" />
-                </Button>
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -38,19 +38,19 @@ namespace InternshipProject.Views
                     }
                     else
                     {
-                        //UserDb context = new UserDb();
-                        //user = context.Users.FirstOrDefault(u => u.username == this.Username && u.password == this.Password);
+                        UserDb context = new UserDb();
+                        user = context.Users.FirstOrDefault(u => u.username == this.Username && u.password == this.Password);
 
-                        //if (user != null)
-                        //{
-                        //    Window window = new MainWindow(user);
-                        //    window.Show();
-                        //    System.Windows.Application.Current.MainWindow.Close();
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("Грешни данни за вход!");
-                        //}
+                        if (user != null)
+                        {
+                            CategoriesWindow categoriesWindow = new CategoriesWindow();
+                            System.Windows.Application.Current.MainWindow.Close();
+                            categoriesWindow.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Грешни данни за вход!");
+                        }
                     }
                 }));
             }
@@ -92,27 +92,19 @@ namespace InternshipProject.Views
             }
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            CategoriesWindow categoriesWindow = new CategoriesWindow();
-            System.Windows.Application.Current.MainWindow.Close();
-            categoriesWindow.Show();
+        //private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    System.Windows.Application.Current.MainWindow.DragMove();
+        //}
 
-        }
-
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            System.Windows.Application.Current.MainWindow.DragMove();
-        }
-
-        private void btnExit_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show("Сигурни ли сте, че желаете да напуснете системата",
-                    "Изход от системата", MessageBoxButton.YesNo);
-            if (result == MessageBoxResult.Yes)
-            {
-                System.Windows.Application.Current.MainWindow.Close();
-            }
-        }
+        //private void btnExit_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBoxResult result = MessageBox.Show("Сигурни ли сте, че желаете да напуснете системата",
+        //            "Изход от системата", MessageBoxButton.YesNo);
+        //    if (result == MessageBoxResult.Yes)
+        //    {
+        //        System.Windows.Application.Current.MainWindow.Close();
+        //    }
+        //}
     }
 }

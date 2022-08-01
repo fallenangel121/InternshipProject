@@ -63,6 +63,16 @@
                              materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="{x:Null}"
                              Background="White" Foreground="Black" ToolTip="Бутон за визуализиране на Билети" x:Name="btnTickets" Command="{Binding }" Content="Билети" Click="btnTickets_Click">
                 </Button>
+
+
+            </StackPanel>
+        </DockPanel>
+        <DockPanel Grid.Row="0"  Grid.Column="5" HorizontalAlignment="Right">
+            <StackPanel>
+                <Button  Margin="10 20" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="{x:Null}"
+                 ToolTip="Излез от приложението" x:Name="btnExit" Command="{Binding LoginCommand}" Height="37" Width="39">
+                    <materialDesign:PackIcon Kind="Close" Foreground="Black" Width="21" Height="21" />
+                </Button>
             </StackPanel>
         </DockPanel>
         <ContentControl Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="5" Content="{Binding}"/>
